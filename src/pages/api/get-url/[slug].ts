@@ -26,6 +26,9 @@ const getUrl = async (req: NextApiRequest, res: NextApiResponse) => {
   });
 
   if (!data) {
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Cache-Control", "s-maxage=1000, stale-while-revalidate");
     return errorMessage(res, "Slug not found");
   }
 
