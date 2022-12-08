@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import { prisma } from "../../db/client";
+import { prisma } from "../../../db/client";
 
 function errorMessage(res: NextApiResponse, message: string) {
   res.statusCode = 404;
@@ -29,7 +29,7 @@ const getUrl = async (req: NextApiRequest, res: NextApiResponse) => {
     return errorMessage(res, "Slug not found");
   }
 
-  return res.redirect(data.url);
+  return res.json(data);
 };
 
 export default getUrl;
