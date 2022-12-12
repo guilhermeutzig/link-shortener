@@ -1,6 +1,10 @@
 # Link Shortener
 
-Simple link shortener using latest technologies. This project has no UI yet to register new URLs, but you can test it here (you should be redirected back to my Github):
+Simple link shortener using latest technologies. This project contains an UI to create a new shortened link, you can access it here:
+
+https://utzigui-link-shortener.vercel.app
+
+To test an already created URL, just add the slug at the end of the root URL:
 
 https://utzigui-link-shortener.vercel.app/github
 
@@ -20,7 +24,3 @@ By using Prisma to structure the models, we save the links with the current stru
 - `Slug`: Slug used in the URL to be redirected to the URL
 
 e.g. `https://utzigui-link-shortener.vercel.app/{slug}`
-
-## Todo
-
-- Create UI to register URL
